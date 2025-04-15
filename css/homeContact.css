@@ -1,0 +1,469 @@
+
+/* - - - - - - - - - - - - - :root CSS - - - - - - - - - - - - - */
+
+/* Definimos CUSTOM PROPERTIES. */
+:root {
+  --negro         : #000;
+  --blanco        : #fffef3;
+  --negrolow      : #0007;
+  --blancolow     : #fffee3;
+
+  /* Tipografía. */
+  --titulos      : "ClashDisplay-Variable", serif;
+  --texto        : "Archivo-Variable", sans-serif;
+  --textoItalic  : "Archivo-VariableItalic", sans-serif;
+}
+
+body {
+  background-color  : var(--blancolow);
+  color: var(--negro);
+  min-height: 100dvh;
+  overflow: hidden;
+}
+
+/* - - - - - - - - - - - - - GRID - - - - - - - - - - - - - */
+.body__container--grid {
+  min-height: 100dvh;
+  
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 50px 1fr 1fr;
+}
+
+.header__menu {
+  width: 100%;
+
+  padding-top: 15px;
+
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header__nav {
+  background-color: var(--negro);
+
+  grid-column: 1 / -1;
+  grid-row: 2 / 4;
+  z-index: 1;
+  display: none;
+  grid-template-rows: 1fr 50px;
+}
+
+.home__container {
+  grid-column: 1 / -1;
+  grid-row: 2 / 4;
+}
+
+.contact__container {
+  grid-column: 1 / -1;
+  grid-row: 2 / 4;
+}
+
+.header__menu-active {
+  background-color: var(--negro);
+}
+.header__nav-active {
+  display: grid;
+}
+
+
+
+/* - - - - - - - - - - - - - HEADER MENU - - - - - - - - - - - - - */
+.header__menu--button {
+  background-color: transparent;
+  padding: 1px 20px;
+
+  font-family: var(--titulos);
+  font-size: 1.1em;
+  font-weight: 400;
+  border-bottom: 2px solid var(--negrolow);
+  transition: all .2s linear;
+}
+.header__menu--button:hover {
+  font-weight: 500;
+  border-bottom: 2px solid var(--negro);
+  transition: all .2s linear;
+}
+
+.header__menu--button-active {
+  color: var(--blanco);
+  border-bottom: 2px solid var(--blancolow);
+}
+.header__menu--button-active:hover {
+  border-bottom: 2px solid var(--blanco);
+}
+
+
+
+/* - - - - - - - - - - - - - HEADER NAV - - - - - - - - - - - - - */
+.header__nav--list {
+  width: 100%;
+
+  padding-right: 30px;
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  text-align: end;
+}
+
+.header__nav--item {
+  width: 85%;
+
+  border-bottom: 2px solid var(--blancolow);
+  animation: show-menu .5s ease backwards;
+
+  &:nth-child(2) {
+    animation-delay: .1s;
+  }
+
+  &:nth-child(3) {
+    animation-delay: .2s;
+  }
+
+  &:last-child {
+    border-bottom: none;
+    animation-delay: .3s;
+  }
+}
+
+
+.header__nav--link {
+  padding-right: 10px;
+
+  color: var(--blanco);
+  font-family: var(--titulos);
+  font-size: 3em;
+}
+.header__nav--link:hover {
+  font-weight: 500;
+}
+
+.header__footer {
+  padding-right: 30px;
+  padding-left: 20px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--blanco);
+  font-family: var(--textoItalic);
+  font-weight: 100;
+  font-size: .7em;
+
+  animation: show-menu .5s ease backwards;
+  animation-delay: .4s;
+}
+
+.header__footer--list {
+  display: flex;
+}
+
+.header__footer--item {
+  padding: 0 5px;
+  line-height: 1em;
+}
+.header__footer--item:first-child {
+  border-right: 1px solid var(--blanco);
+}
+
+.header__footer--link:hover {
+  font-weight: 300;
+}
+/* - - - HEADER NAV @QUERIES - - -  */
+@media screen and (min-width: 1000px) {
+  .header__nav--link {
+    font-size: 7.8em;
+  }
+  .header__footer {
+    font-size: .9em;
+  }
+}
+@media screen and (max-width: 1000px) and (min-width: 480px) {
+  .header__nav--link {
+    font-size: 4.5em;
+  }
+  .header__footer {
+    font-size: .8em;
+  }
+}
+/* - - - HEADER NAV ANIMATIONS - - -  */
+@keyframes show-menu {
+  from {
+    opacity: 0;
+    transform: translateX(25%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+
+/* - - - - - - - - - - - - - HOME SECTION - - - - - - - - - - - - - */
+.home__container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-content: center;
+  gap: 90px;
+}
+
+.home__title {
+  width: 95%;
+
+  padding: 40px 10px 10px 10px;
+
+  text-align: center;
+  
+  animation: show-home 1s ease both;
+}
+
+.title--h1 {
+  margin-bottom: 50px;
+  font-family: var(--titulos);
+  font-size: 3.8em;
+  line-height: .8em;
+}
+
+.title--h2 {
+  font-family: var(--titulos);
+  font-weight: 200;
+  font-size: 2.8em;
+  letter-spacing: 4px;
+  line-height: .8em;
+
+}
+.title--h2:last-of-type {
+  letter-spacing: 10px;
+}
+
+.home__rrss {
+  width: 60%;
+}
+
+.rrss--list {
+  display: flex;
+  justify-content: center;
+  gap: 130px;
+}
+
+.rrss--item {
+  padding: 0px 2px ;
+
+  font-family: var(--texto);
+  font-weight: 200;
+  font-size: 1.2em;
+  border-top: 2px solid var(--negrolow);
+  animation: show-home 1s ease backwards;
+  animation-delay: .1s;
+}
+.rrss--item:hover {
+  font-weight: 300;
+  border-top: 2px solid var(--negro);
+}
+
+.last-item {
+  animation-delay: .2s;
+}
+/* - - - HOME SECTION @QUERIES - - -  */
+@media screen and (min-width: 1000px) {
+  .title--h1 {
+    margin-bottom: 80px;
+    font-size: 7.3em;
+  }
+  .title--h2 {
+    font-size: 6.3em;
+  }
+  .rrss--item {
+    font-size: 1.4em;
+  }
+}
+@media screen and (max-width: 1000px) and (min-width: 480px) {
+  .title--h1 {
+    margin-bottom: 60px;
+    font-size: 4.8em;
+  }
+  .title--h2 {
+    font-size: 3.8em;
+  }
+  .rrss--item {
+    font-size: 1.3em;
+  }
+}
+/* - - - HOME SECTION ANIMATIONS - - -  */
+@keyframes show-home {
+  from {
+    opacity: 0;
+    transform: translateY(200px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* - - - - - - - - - - - - - CONTACT SECTION - - - - - - - - - - - - - */
+.contact__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact__form {
+  width: 70%;
+
+  padding: 10px;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 40px 40px 40px 1fr 50px;
+  grid-template-areas: 
+    "subject subject"
+    "name name"
+    "email email"
+    "message message"
+    "button button";
+  gap: 30px;
+
+  animation: show-contact 2s ease both;
+}
+
+.form--subject {
+  grid-area: subject;
+}
+.form--name {
+  grid-area: name;
+}
+
+.form--email {
+  grid-area: email;
+}
+
+.form--message {
+  grid-area: message;
+
+  border-bottom: 2px solid var(--negrolow)
+}
+
+.form--button {
+  grid-area: button;
+
+  margin-top: 170px;
+  padding: 3px 15px;
+
+  justify-self: center;
+  align-self: center;
+  justify-content: center;
+
+  font-family: var(--titulos);
+  color: var(--negrolow);
+  font-size: 2em;
+  letter-spacing: 1px;
+  border-top: 2px solid var(--negrolow);
+}
+.form--button:hover {
+  color: var(--negro);
+  border-top: 2px solid var(--negro);
+}
+.form--button:active {
+  background-color: var(--negro);
+  color: var(--blancolow);
+  border-top: 2px solid var(--blancolow);
+}
+
+.form--subject, .form--name, .form--email {
+  padding-left: 10px;
+
+  align-items: end;
+
+  font-family: var(--titulos);
+  border-bottom: 2px solid var(--negrolow);
+}
+label:focus-within  {
+  border-bottom: 3px solid var(--negro)
+}
+
+input {
+  width: 100%;
+
+  font-size: 1.2em;
+  letter-spacing: 1px;
+  outline: none;
+}
+
+textarea {
+  width: 100%;
+  resize: none;
+  field-sizing: content; /* Experimental (no funciona en todos los navs. */
+  max-height: 200px;
+
+  padding: 10px;
+
+  font-family: var(--titulos);
+  font-size: 1.2em;
+  outline: none; 
+}
+input::placeholder, textarea::placeholder {
+  font-weight: 300  ;
+}
+input:focus::placeholder, textarea:focus::placeholder {
+  color: transparent;
+}
+/* - - - CONTACT SECTION @QUERIES - - -  */
+/*
+@media screen and (min-width: 1100px) {
+  .contact__form {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 40px 40px 1fr 50px;
+    grid-template-areas: 
+      "subject ."
+      "name email"
+      "message message"
+      "button button";
+    gap: 50px;
+  }
+  input, textarea {
+    font-size: 3em;
+    max-height: 380px;
+  }
+  .form--button {
+    font-size: 4em;
+  }
+}
+*/
+@media screen and  (min-width: 990px) {
+  .contact__form {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 40px 40px 1fr 50px;
+    grid-template-areas: 
+      "subject ."
+      "name email"
+      "message message"
+      "button button";
+    gap: 40px;
+  }
+  input, textarea {
+    font-size: 2.1em;
+    max-height: 290px;
+  }
+  .form--button {
+    font-size: 3em;
+  }
+}
+/* - - - CONTACT SECTION ANIMATIONS- - -  */
+@keyframes show-contact {
+  from {
+    opacity: 0;
+    transform: translateY(200px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
