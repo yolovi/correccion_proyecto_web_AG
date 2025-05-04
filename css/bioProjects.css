@@ -1,5 +1,4 @@
 
-
 /* - - - - - - - - - - - - - :root CSS - - - - - - - - - - - - - */
 
 /* Definimos CUSTOM PROPERTIES. */
@@ -19,19 +18,17 @@ body {
   background-color  : var(--negro);
   color: var(--blanco);
   min-height: 100dvh;
-  overflow: hidden;
+  overflow: auto;
 }
-
-
 
 /* - - - - - - - - - - - - - GRID - - - - - - - - - - - - - */
 .body__container--grid {
   min-height: 100dvh;
+  overflow: hidden;
 
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 50px 1fr 1fr;
-
 }
 
 .header__menu {
@@ -87,19 +84,17 @@ body {
   transition: all .2s linear;
 }
 .header__menu--button:hover {
-  font-weight: 400;
+  font-weight: 500;
   border-bottom: 2px solid var(--blanco);
 }
 
 .header__menu--button-active {
   color: var(--negro);
   border-bottom: 2px solid var(--negrolow);
-  transition: all .2s linear;
 }
 .header__menu--button-active:hover {
   border-bottom: 2px solid var(--negro);
 }
-
 
 
 /* - - - - - - - - - - - - - HEADER NAV - - - - - - - - - - - - - */
@@ -119,7 +114,6 @@ body {
 .header__nav--item {
   width: 85%;
   
-
   border-bottom: 2px solid var(--negrolow);
   animation: show-menu .5s ease backwards;
 
@@ -209,15 +203,16 @@ body {
   }
 }
 
+
 /* - - - - - - - - - - - - - BIOGRAPHY SECTION - - - - - - - - - - - - - */
 .bio__container {
+  margin: 30px 0;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .bio__elements {
-  /* background-color: purple; */
   width: 75%;
   
   display: flex;
@@ -270,8 +265,6 @@ p ~ .separator {
 }
 
 .info {
-  /* background-color: lightcoral; */
-
   font-size: 1em;
   text-wrap: balance;
   text-align: center;
@@ -453,7 +446,6 @@ p ~ .separator {
   border-radius: 3px;
   
   mask-image: linear-gradient(black 60%, transparent);
-
 }
 
 .project--info {
@@ -479,8 +471,7 @@ p ~ .separator {
 
   font-family: var(--titulos);
   text-align: center;
-  font-size: 2em;
-  
+  font-size: 2em; 
 }
 
 .info--text {
