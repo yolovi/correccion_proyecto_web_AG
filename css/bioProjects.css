@@ -15,10 +15,11 @@
 }
 
 body {
+  font-family       : var(--texto);
   background-color  : var(--negro);
-  color: var(--blanco);
-  min-height: 100dvh;
-  overflow: auto;
+  color             : var(--blanco);
+  min-height        : 100dvh;
+  /* overflow          : auto; */
 }
 
 /* - - - - - - - - - - - - - GRID - - - - - - - - - - - - - */
@@ -73,7 +74,7 @@ body {
 
 /* - - - - - - - - - - - - - HEADER MENU - - - - - - - - - - - - - */
 .header__menu--button {
-  background-color: transparent;
+  /* background-color: transparent; */
   padding: 1px 20px;
 
   font-family: var(--titulos);
@@ -409,7 +410,7 @@ p ~ .separator {
 }
 
 .projects__list {
-  max-height: 83dvh;
+  max-height: 80dvh;
   overflow: auto;
 
   padding-right: 25px;

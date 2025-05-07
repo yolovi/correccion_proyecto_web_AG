@@ -15,10 +15,11 @@
 }
 
 body {
+  font-family       : var(--texto);
   background-color  : var(--blancolow);
-  color: var(--negro);
-  min-height: 100dvh;
-  overflow: auto;
+  color             : var(--negro);
+  min-height        : 100dvh;
+  /* overflow          : auto; */
 }
 
 /* - - - - - - - - - - - - - GRID - - - - - - - - - - - - - */
@@ -73,7 +74,7 @@ body {
 
 /* - - - - - - - - - - - - - HEADER MENU - - - - - - - - - - - - - */
 .header__menu--button {
-  background-color: transparent;
+  /* background-color: transparent; */
   padding: 1px 20px;
 
   font-family: var(--titulos);

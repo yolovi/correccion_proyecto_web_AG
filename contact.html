@@ -10,20 +10,20 @@
   <meta name="description" content="Alejandro Goscu. Frontend Developer en pleno crecimiento.">
   <meta name="keywords" content="Frontend, HTML, CSS, JavaScript, Developer, Portfolio, alejandro, Goscu">
   <meta name="author" content="Alejandro Goscu">
-  <meta name="robots" content="index, follow">
 
-  <link rel="icon" type="image/svg" href="assets/favicon.svg">
   <link rel="stylesheet" href="/css/reset.css">
   <link rel="stylesheet" href="/css/fonts.css">
   <link rel="stylesheet" href="/css/homeContact.css">
-  <script defer src="/js/web.js"></script>
 </head>
 
 <body>
+  <!-- Div para grid -->
   <div class="body__container--grid">
+    <!-- Boton de menú -->
     <header class="header__menu" id="header__menu">
       <button class="header__menu--button" id="menu--button" name="menu--button">Menu</button>
     </header>
+    <!-- Menu de navegación -->
     <nav class="header__nav" id="header__nav">
       <ul class="header__nav--list">
         <li class="header__nav--item"><a href="/index.html" class="header__nav--link" id="nav--link">Inicio</a></li>
@@ -31,6 +31,7 @@
         <li class="header__nav--item"><a href="/projects.html" class="header__nav--link" id="nav--link">Proyectos</a></li>
         <li class="header__nav--item"><a href="/contact.html" class="header__nav--link" id="nav--link">Contacto</a></li>
       </ul>
+      <!-- Footer del menu de navegacion -->
       <footer class="header__footer">
         <p class="header__footer--copy">Alejandro Goscu © 2025</p>
         
@@ -40,7 +41,7 @@
         </ul>
       </footer>
     </nav>
-    
+    <!-- Contenedor principal -->
     <main class="contact__container" id="contact">
       <form class="contact__form">
         <label class="form--subject">
@@ -59,5 +60,7 @@
       </form>
     </main>
   </div>
+
+  <script src="/js/web.js"></script>
 </body>
 </html>

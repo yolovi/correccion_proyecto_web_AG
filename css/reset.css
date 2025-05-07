@@ -46,7 +46,7 @@ form, input, textarea, select, button, label {
   background-color  : transparent;
   display           : flex;
   color             : inherit;
-  /* opcional   appearance        : none; */
+ 
 }
 
 /* Evitamos problemas con las imágenes. */
@@ -58,14 +58,8 @@ img, picture, video, iframe {
   object-position : center center;
 }
 
-/* Configuramos fondo y la tipografía para toda la web. */
-body {
-  font-size         : 100%;
-  font-family       : var(--texto);
-  color             : var(--negro);
-}
 
-/* Configuramos la barra de Scroll. */
+/* Configuramos la barra de Scroll (Scrollbar app). */
 .projects__list {
   --sb-track-color: #000000;
   --sb-thumb-color: #fffee3;
