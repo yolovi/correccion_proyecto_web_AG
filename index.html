@@ -11,9 +11,12 @@
   <meta name="keywords" content="Frontend, HTML, CSS, JavaScript, Developer, Portfolio, alejandro, Goscu">
   <meta name="author" content="Alejandro Goscu">
   
-  <link rel="stylesheet" href="/css/reset.css">
-  <link rel="stylesheet" href="/css/fonts.css">
-  <link rel="stylesheet" href="/css/homeContact.css">
+  <!-- CORRECCION:
+    estas rutas absolutas pueden darte fallos dependiendo de donde despliegues la web,  utiliza siempre rutas relativas
+   -->
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/homeContact.css">
 </head>
 
 <body>
@@ -26,10 +29,10 @@
     <!-- Menu de navegación -->
     <nav class="header__nav" id="header__nav">
       <ul class="header__nav--list">
-        <li class="header__nav--item"><a href="/index.html" class="header__nav--link" id="nav--link">Inicio</a></li>
-        <li class="header__nav--item"><a href="/bio.html" class="header__nav--link" id="nav--link">Biografía</a></li>
-        <li class="header__nav--item"><a href="/projects.html" class="header__nav--link" id="nav--link">Proyectos</a></li>
-        <li class="header__nav--item"><a href="/contact.html" class="header__nav--link" id="nav--link">Contacto</a></li>
+        <li class="header__nav--item"><a href="index.html" class="header__nav--link" id="nav--link">Inicio</a></li>
+        <li class="header__nav--item"><a href="bio.html" class="header__nav--link" id="nav--link">Biografía</a></li>
+        <li class="header__nav--item"><a href="projects.html" class="header__nav--link" id="nav--link">Proyectos</a></li>
+        <li class="header__nav--item"><a href="contact.html" class="header__nav--link" id="nav--link">Contacto</a></li>
       </ul>
       <!-- Footer del menu de navegacion -->
       <footer class="header__footer">
@@ -58,6 +61,6 @@
     </main>
   </div>
 
-  <script src="/js/web.js"></script>
+  <script src="js/web.js"></script>
 </body>
 </html>

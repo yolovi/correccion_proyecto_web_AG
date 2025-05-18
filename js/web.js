@@ -1,10 +1,8 @@
 
-
 // ABRIR Y CERRAR EL MENU DE NAV.
 const ButtonMenu  = document.getElementById("menu--button");
 const HeaderMenu  = document.getElementById("header__menu");
 const HeaderNav   = document.getElementById("header__nav");
-
 
 function openMenu() {
   ButtonMenu.innerText = "Cerrar";
@@ -20,7 +18,6 @@ function closeMenu() {
   ButtonMenu.classList.remove("header__menu--button-active");
 }
 
-
 ButtonMenu.addEventListener("click", () => {
   if (ButtonMenu.innerText == "Menu") {
     openMenu()
@@ -29,10 +26,6 @@ ButtonMenu.addEventListener("click", () => {
   }
 })
 
-
-
-
-
 // ABRIR Y CERRAR [ANTES DE...] MORE INFO BIO.
 const ButtonMore    = document.getElementById("more--button")
 const MoreInfo      = document.getElementById("more--info")
@@ -40,14 +33,3 @@ const MoreInfo      = document.getElementById("more--info")
 ButtonMore.addEventListener("click", () => {
   MoreInfo.classList.toggle("more--info-active")
 })
-
-
-
-
-
-
-
-
-
-
-
